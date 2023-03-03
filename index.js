@@ -175,5 +175,11 @@ function shufflepassword(array)
     }
     let str = "";
     array.forEach((value)=>str+=value)
+    
+if(str.length >18)
+{
+    console.log("calcStrength");
+    GeneratedPsd.style.fontsize = "12px"
+}
     return str;
 }
