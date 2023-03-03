@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body class="flex justify-center items-center ">
+    <div class="container flex flex-col justify-center items-center w-[100vw] h-[100vh] gap-5 gap-x-0 md:p-0 p-5">
+        <!-- heading -->
+        <h1 class="text-white text-xl md:text-3xl font-semibold tracking-wider font-playfair">PASSWORD GENERATOR</h1>
+
+        <!-- generated box -->
+        <div class="bg-[#160628] w-full md:w-[29%] md:h-20 h-16 flex justify-between items-center border-b-4 border-purple-600 rounded-2xl px-4">
+            <div class=" justify-start text-white"><p class="G-Password-box text-2xl text-yellow-300  tracking-widest font-playfair">Password</p></div>
+            <!-- copy button box -->
+            <div class="copy justify-end text-green-400 text-xl cursor-pointer relative">
+                <span class="cpy-box absolute -top-10 -left-10 px-3 bg-purple-500 rounded-xl text-yellow-300 transition-all duration-[2s] ease-in-out"> </span>
+                <i class="fa-regular fa-clone cpy-btn"></i>
+            </div>
+        </div>
+
+        <!-- password property box -->
+        <div class="bg-[#160628] w-full md:w-[29%] h-auto flex justify-between items-center border-b-4 border-purple-600 rounded-2xl px-5 py-3 flex-wrap gap-y-5">
+            <!-- length -->
+            <div class="flex items-center justify-between w-full">
+                <div class=" justify-start text-white">
+                    <p class="PasswordG tracking-wider text-lg md:text-2xl font-playfair">Password Length</p> 
+                </div>
+                <div class="copy justify-end text-yellow-200 text-2xl cursor-pointer" psdLength>
+                    8
+                </div>
+            </div>
+
+            <!-- slider -->
+            <div class="w-full">
+               <input type="range" min="1" max="20" value="50" step="1" class="slider appearance-none h-3 rounded-3xl w-full" id="myRange">
+            </div>
+            
+            <!-- check boxex -->
+            <div class="flex  items-start justify-between flex-wrap gap-3 mt-3">
+                <!-- first checkmark -->
+                <div class="w-full">
+                    <input type="checkbox" class="checkbox w-5 h-5 rounded-md border border-sky-300 appearance-none relative checked:bg-sky-300 cursor-pointer" id="upperCase" checked>
+                    <label for="Uppercase" class="text-white text-xl lg:text-xl space-x-5 ml-2 relative font-mono">Include Uppercase letters</label>
+                </div>
+                <!-- second checkmark -->
+                <div class="w-11/12">
+                    <input type="checkbox" class="checkbox w-5 h-5 rounded-md border border-sky-300 appearance-none relative checked:z-10 checked:bg-sky-300 cursor-pointer" id="lowerCase">
+                    <label for="numbers" class="text-white text-xl font-mono lg:text-xl space-x-5 ml-2 relative">Include Lowercase letters</label>
+                </div>
+                <!-- third checkmark -->
+                <div class="w-11/12">
+                    <input type="checkbox" class="checkbox w-5 h-5 rounded-md border border-sky-300 appearance-none relative checked:z-10 checked:bg-sky-300 cursor-pointer" id="number">
+                    <label for="numbers" class="text-white text-lg lg:text-xl space-x-5 ml-2 relative font-mono">Include Numbers </label>
+                </div>
+                <!-- last checkmark -->
+                <div class="w-11/12">
+                    <input type="checkbox" class=" checkbox w-5 h-5 rounded-md border border-sky-300 appearance-none relative  checked:z-10 checked:bg-sky-300  cursor-pointer" id="symbol">
+                    <label for="symbols" class="text-white text-xl lg:text-xl space-x-5 ml-2 font-mono">Include Symbols</label>
+                </div>
+            </div> 
+            <!-- password strength box -->
+            <div class="flex justify-between items-center w-full   ">
+                <p class="text-white text-xl tracking-wider font-playfair">Strength</p>
+                <div class="w-6 h-6 rounded-full" StrengthIndicator></div>
+            </div>
+
+            <!-- generate password btn box -->
+            <div class="GenerateBtn flex md:w-11/12 md:h-1/6 w-full h-16 justify-center ml-3 items-center md:mb-12 m-3 md:border-b-[6px] border-b-[4px] border-yellow-300 rounded-xl bg-[#BC15F4] cursor-pointer hovr:bg-[#CD14F3]">
+                <p class="text-yellow-300 md:text-2xl text-lg font-bold tracking-widest px-2 md:px-0">Generate Password</p>
+            </div>
+        </div>
+
+        <p class="text-purple-500 text-xl font-playfair tracking-[1rem]"><span class="text-green-500 -mr-1 "><i class="fa-regular fa-copyright"></i></span><span class="text-yellow-300">A</span>bhishek</p>
+    </div>
+
+    <!-- js -->
+    <script src="https://kit.fontawesome.com/d3cb673d00.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
